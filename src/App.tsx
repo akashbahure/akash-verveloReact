@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import Greet from "./components/Greet";
 import Counter from "./components/Counter";
-
+import ShoppingList from "./components/ShoppingList";
+import ConditinalExample from "./components/ConditinalExample";
 import "./App.css";
 
 function App() {
@@ -18,6 +18,15 @@ function App() {
         </Greet> */}
         {/* <Greet name="arjun" surname="rai" />
         <Greet name="rahul" surname="raj" /> */}
+
+
+      </div>
+      <div>
+        <ShoppingList />
+      </div>
+
+      <div className="log">
+      <ConditinalExample />
       </div>
     </>
   );
