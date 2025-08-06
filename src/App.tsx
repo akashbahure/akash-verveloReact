@@ -4,14 +4,28 @@ import ShoppingList from "./components/ShoppingList";
 import ConditinalExample from "./components/ConditinalExample";
 import SimpleForm from "./components/SimpleForm";
 import "./App.css";
+import { UserProvider } from "./contextApi/UserContext";
+import Login from "./contextApi/Login";
+import Profile from "./contextApi/Profile";
+import HookCounterObject from "./components/HookCounterObject";
+import HookCounterOne from "./components/HookCounterOne";
 
-function App() {
+const App:React.FC=() =>{
   return (
     <>
+    <UserProvider>
+      <h2>---context Api Example</h2>
+      <Login />
+      <Profile />
+    </UserProvider>
       <div className="App">
-        <h2>Hello React with Ts</h2>
+        {/* <h2>Hello React with Ts</h2> */}
         <h2>---Basic State Example</h2>
         <Counter />
+        <HookCounterObject />
+        <h2>--useEffect</h2>
+        <HookCounterOne />
+ 
         <h2>---Props</h2>
         <Greet name="Rohit" surname="sharma">
           {/* <p>this is a children</p> */}
